@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -5,6 +7,7 @@
 :root {
     --bg-color: #FDFDFD;
     --text-color: #0F0F0F;
+    --text-font: 'Poppins', sans-serif;
 }
 
 html,body {
@@ -12,6 +15,7 @@ html,body {
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: var(--text-font);
     background-color: var(--bg-color);
 }
 
@@ -29,21 +33,59 @@ a {
 
 #header {
     width: 100vw;
-    height: 100px;
+    height: 110px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    /* padding: 20px 20vw 20px 20vw; */
+    padding: 20px 40px 20px 40px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--bg-color);
 }
 
-#header * {
-    display: inline-block;
+#logo-link {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #logo {
-    align-self: flex-start;
     height: 100%;
+    justify-self: flex-start;
+    filter: grayscale(50%);
+}
+
+#name {
+    font-family: 'Pragati Narrow', sans-serif;
+    color: #6EC398;
+    margin-left: 20px;
+    font-size: 45px;
 }
 
 #menu {
-    align-self: flex-end;
+    margin-left: auto;
+    justify-self: flex-end;
+}
+
+.menu-item {
+    border-radius: 5px;
+    margin-left: min(3vw, 30px);
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.menu-item:first-child {
+    margin-left: unset;
+}
+
+#particles-js {
+    width: 100vw;
+    height: 70vh;
+    background-image: linear-gradient(to right top, #69bb8d, #6cbf91, #70c394, #73c798, #77cb9c, #7dcf9f, #82d3a1, #88d7a4, #91dca7, #99e0a9, #a2e5ac, #aae9af);
+    /* background-image: linear-gradient(45deg, rgba(105,187,141,1) 0%, rgba(124,209,161,1) 35%, rgba(170,233,175,1) 99%); */
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 }

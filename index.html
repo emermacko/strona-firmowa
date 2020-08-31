@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>&mdash; Marcin Wypijewski</title>
-        <link rel="stylesheet" href="styles/indexStyle.css">
+        <link href="styles/indexStyle.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
     <script src="scripts/jquery.min.js"></script>
     <body>
@@ -14,14 +15,21 @@
         </script>
         <div id="container">
             <div id="header">
-                <img src="img/logo.png" alt="logo" id="logo">
-                <div id="name">Nazwa</div>
+                <a id="logo-link" href="">
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <span id="name">Nazwa</span>
+                </a>
                 <div id="menu">
-                    <a href="#">O nas</a>
-                    <a href="#">Uslugi</a>
-                    <a href="#">Kontakt</a>
+                    <a class="menu-item" href="#">O nas</a>
+                    <a class="menu-item" href="#">Uslugi</a>
+                    <a class="menu-item" href="#">Kontakt</a>
                 </div>
             </div>
+            <div id="particles-js"></div>
+            <script src="scripts/particles.min.js"></script>
+            <script> 
+                particlesJS.load('particles-js', 'assets/particles-config.json');
+            </script>
         </div>
     </body>
 </html>
