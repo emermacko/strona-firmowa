@@ -9,17 +9,16 @@
     <script src="scripts/jquery.min.js"></script>
     <body>
         <script type="text/javascript">
-            $(document).ready(function(){
-                $('#container').fadeIn(500);
-            })
+            $(document).ready(function(){$('#container').animate({opacity: 1}, 1500)})
         </script>
         <div id="container">
             <div id="header">
-                <a id="logo-link" href="">
+                <a id="logo-link" href="#">
                     <img src="img/logo.png" alt="logo" id="logo">
-                    <span id="name">Nazwa</span>
+                    <span id="name">Nazwa Firmy</span>
                 </a>
                 <div id="menu">
+                    <img src="img/logo.png" alt="logo-min" id="logo-min" style="height: 0;">
                     <a class="menu-item" href="#">O nas</a>
                     <a class="menu-item" href="#">Uslugi</a>
                     <a class="menu-item" href="#">Kontakt</a>
@@ -27,9 +26,8 @@
             </div>
             <div id="particles-js"></div>
             <script src="scripts/particles.min.js"></script>
-            <script> 
-                particlesJS.load('particles-js', 'assets/particles-config.json');
-            </script>
+            <script> particlesJS.load('particles-js', 'assets/particles-config.json'); </script>
+            <script src="scripts/index.js" defer></script>
         </div>
     </body>
 </html>

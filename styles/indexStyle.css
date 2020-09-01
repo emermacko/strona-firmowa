@@ -10,6 +10,7 @@
     --text-font: 'Poppins', sans-serif;
 }
 
+
 html,body {
     height: 100%;
     width: 100%;
@@ -17,6 +18,7 @@ html,body {
     padding: 0;
     font-family: var(--text-font);
     background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 a {
@@ -25,6 +27,7 @@ a {
 }
 
 #container {
+    opacity: 0;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -33,59 +36,98 @@ a {
 
 #header {
     width: 100vw;
-    height: 110px;
     display: flex;
-    align-items: center;
-    /* padding: 20px 20vw 20px 20vw; */
-    padding: 20px 40px 20px 40px;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 0 0 10px 10px;
     background-color: var(--bg-color);
 }
 
 #logo-link {
-    height: 100%;
+    height: 100px;;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
-#logo {
-    height: 100%;
+#logo, #logo-min {
+    height: 60px;
     justify-self: flex-start;
     filter: grayscale(50%);
 }
 
 #name {
+    height: 100px;
+    line-height: 100px;
     font-family: 'Pragati Narrow', sans-serif;
     color: #6EC398;
     margin-left: 20px;
-    font-size: 45px;
+    font-size: 70px;
 }
 
 #menu {
-    margin-left: auto;
-    justify-self: flex-end;
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    background-color: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw 0 5vw;
+}
+
+#logo-min {
+    display: none;
+    position: absolute;
+    left: 5vw;
 }
 
 .menu-item {
-    border-radius: 5px;
-    margin-left: min(3vw, 30px);
-    position: relative;
+    font-size: 17px;
+    margin: 2.5vw;
     margin-bottom: 10px;
-    font-weight: 200;
-    cursor: pointer;
+    transition: color .5s;
 }
 
-.menu-item:first-child {
-    margin-left: unset;
+.menu-item:hover {
+    color: #6BC29B;
+    transition: color .3s;
 }
 
 #particles-js {
     width: 100vw;
-    height: 70vh;
+    height: 150vh;
     background-image: linear-gradient(to right top, #69bb8d, #6cbf91, #70c394, #73c798, #77cb9c, #7dcf9f, #82d3a1, #88d7a4, #91dca7, #99e0a9, #a2e5ac, #aae9af);
     /* background-image: linear-gradient(45deg, rgba(105,187,141,1) 0%, rgba(124,209,161,1) 35%, rgba(170,233,175,1) 99%); */
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
+}
+
+@media only screen and (min-width: 800px) {
+    #header {
+        position: fixed;
+        height: 100px;
+        flex-direction: row;
+        padding: 20px 5vw 20px 5vw;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    #menu {
+        width: unset;
+        margin-left: auto;
+        padding: unset;
+        align-items: center;
+    }
+
+    .menu-item {
+        margin: 0 2.5vw 0 2.5vw;
+    }
+
+}
+
+@media only screen and (min-width: 1100px) {
+    #header {
+        padding: 20px 15vw 20px 15vw;
+    }
 }
