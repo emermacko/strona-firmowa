@@ -39,17 +39,7 @@ function stickMenu(bool) {
 }
 
 $('.demo').click(function(){
-    switch($(this).attr('id').slice(-1)){
-        case '1':
-            location.href = 'https://google.com';
-            break;
-        case '2':
-            location.href = 'https://facebook.com';
-            break;
-        case '3':
-            location.href = 'https://youtube.com';
-            break;
-    }
+    location.href = $(this).attr('data-href');
 });
 
 function shouldStick(scrollTop) {
