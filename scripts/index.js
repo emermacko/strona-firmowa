@@ -20,11 +20,10 @@ $(document).scroll(function(){
     }
 });
 
-const menu = $('#menu');
-
 function stickMenu(bool) {
-
+    const menu = $('#menu');
     var calc = menu.width();
+    
     $('.menu-item').each(function(){
         calc -= ($(this).width() + 0.05*$(window).width());
     });
@@ -39,8 +38,22 @@ function stickMenu(bool) {
     sticked = bool;
 }
 
+$('.demo').click(function(){
+    switch($(this).attr('id').slice(-1)){
+        case '1':
+            location.href = 'https://google.com';
+            break;
+        case '2':
+            location.href = 'https://facebook.com';
+            break;
+        case '3':
+            location.href = 'https://youtube.com';
+            break;
+    }
+});
+
 function shouldStick(scrollTop) {
-    const menuHeight = menu.outerHeight();
+    const menuHeight = $('#menu').outerHeight();
     const headerHeight = $('#header').outerHeight();
 
     return (!isDesktop() && (scrollTop >= headerHeight - menuHeight));

@@ -168,6 +168,10 @@ a {
     align-items: center;
 }
 
+.demo p {
+    user-select: text;
+}
+
 .demo {
     margin-top: 50px;
     width: 80vw;
