@@ -12,11 +12,9 @@ $(document).ready(function(){
 $(document).scroll(function(){
     const scrollTop = $(window).scrollTop();    
     if(shouldStick(scrollTop) && !sticked){
-        console.log(1);
         stickMenu(true);
     }
     if(!shouldStick(scrollTop) && sticked) {
-        console.log(2);
         stickMenu(false);
     }
 });
@@ -49,7 +47,6 @@ function shouldStick(scrollTop) {
 
 function animateMargin(margin, show) {
     if(!menuAnimation) {
-        console.log('Trigger [true]');
         menuAnimation = true;
         if(show) {
             $('#logo-min').fadeIn(500);
@@ -57,7 +54,6 @@ function animateMargin(margin, show) {
             $('#logo-min').fadeOut(500);
         }
         $('.menu-item').first().animate({marginLeft: margin}).promise().done(function(){
-            console.log('Trigger [false]');
             menuAnimation = false;
         });        
     }

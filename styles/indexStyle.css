@@ -68,7 +68,6 @@ a {
 #logo, #logo-min {
     height: 60px;
     justify-self: flex-start;
-    filter: grayscale(50%);
 }
 
 #name {
@@ -96,12 +95,24 @@ a {
     left: 5vw;
 }
 
+.menu-item:after {
+  display:block;
+  content: '';
+  border-bottom: solid 1px #647A92;  
+  transform: scaleX(0);  
+  transition: transform 300ms ease-in-out;
+}
+
+.menu-item:hover:after {
+    transform: scaleX(1);
+}
+
+
 .menu-item {
     font-size: 18px;
     margin: 2.5vw;
     margin-bottom: 10px;
     transition: color .5s;
-
 }
 
 .menu-item:hover {
