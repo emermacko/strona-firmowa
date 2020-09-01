@@ -2,12 +2,23 @@
 
 * {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
     --bg-color: #FDFDFD;
     --text-color: #0F0F0F;
     --text-font: 'Poppins', sans-serif;
+
+    --gradient-start: #2D2F34;
+    --gradient-mid: #393B41;
+    --gradient-end: #555960;
+
+    --gradient-start: #282D36;
+    --gradient-mid: #2E333D;
+    --gradient-end: #4B535E;
+
+    --accent-color: #D9A21B;
 }
 
 
@@ -64,9 +75,9 @@ a {
     height: 100px;
     line-height: 100px;
     font-family: 'Pragati Narrow', sans-serif;
-    color: #6EC398;
+    color: #4E5E73;
     margin-left: 20px;
-    font-size: 70px;
+    font-size: 55px;
 }
 
 #menu {
@@ -86,22 +97,25 @@ a {
 }
 
 .menu-item {
-    font-size: 17px;
+    font-size: 18px;
     margin: 2.5vw;
     margin-bottom: 10px;
     transition: color .5s;
+
 }
 
 .menu-item:hover {
-    color: #6BC29B;
+    color: #647A92;
     transition: color .3s;
 }
 
 #particles-js {
     width: 100vw;
-    height: 150vh;
-    background-image: linear-gradient(to right top, #69bb8d, #6cbf91, #70c394, #73c798, #77cb9c, #7dcf9f, #82d3a1, #88d7a4, #91dca7, #99e0a9, #a2e5ac, #aae9af);
-    /* background-image: linear-gradient(45deg, rgba(105,187,141,1) 0%, rgba(124,209,161,1) 35%, rgba(170,233,175,1) 99%); */
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(40,46,57,1) 0%, rgba(66,77,98,1) 43%, rgba(102,122,148,1) 86%);
+    /* background-image: linear-gradient(to right top, #282d36, #292e37, #2a2f38, #2b303a, #2c313b, #2f343e, #323842, #353b45, #3a414b, #404751, #454d58, #4b535e); */
+    /* background-image: linear-gradient(to right top, #2d2f34, #2f3136, #313339, #34363b, #36383e, #393b42, #3d3f45, #404249, #45484f, #4a4d54, #50535a, #555960); */
+    /* background-image: linear-gradient(to right top, #68bd93, #7ecc9e, #89d3a3, #94dba9,  #a8e8a8, #b3eea7, #c3f39e, #d5f896, #f8f896); */
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
