@@ -10,9 +10,9 @@
     <script src="scripts/jquery.min.js"></script>
     <body>
         <script type="text/javascript">
-            $(document).ready(function(){$('#container').animate({opacity: 1}, 1500)})
+            $(document).ready(function(){$('#content').animate({opacity: 1}, 1500)})
         </script>
-        <div id="container">
+        <div id="content">
             <div id="header">
                 <a id="logo-link" href="#">
                     <img src="img/logo.png" alt="logo" id="logo">
@@ -20,16 +20,41 @@
                 </a>
                 <div id="menu">
                     <img src="img/logo.png" alt="logo-min" id="logo-min" style="height: 0;">
-                    <a class="menu-item" href="#">O NAS</a>
-                    <a class="menu-item" href="#">USŁUGI</a>
-                    <a class="menu-item" href="#">KONTAKT</a>
+                    <a class="menu-item" href="">O NAS</a>
+                    <a class="menu-item" href="">USŁUGI</a>
+                    <a class="menu-item" href="">KONTAKT</a>
                 </div>
             </div>
             <div id="particles-js">
+                <div id="title-text">
+                    <h1>Przykładowy Tytuł</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
                 <script src="scripts/particles.min.js"></script>
                 <script> particlesJS.load('particles-js', 'assets/particles-config.json'); </script>
             </div>
-            
+            <div id="main-container">
+                <div id="services-container">
+                    <a href="">
+                        <div class="demo" id="demo-1">
+                            <h1>Usługa 1</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lectus leo. Ut ac augue commodo arcu malesuada commodo. Donec viverra erat ante, at lacinia sem posuere in. Quisque id rhoncus lectus. Nunc maximus tempus porta. Sed volutpat mauris sodales, vehicula mi id, rhoncus justo. Praesent elementum turpis malesuada, sollicitudin nibh vitae, congue neque. Donec ac urna risus.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="demo" id="demo-2">
+                            <h1>Usługa 2</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lectus leo. Ut ac augue commodo arcu malesuada commodo. Donec viverra erat ante, at lacinia sem posuere in. Quisque id rhoncus lectus. Nunc maximus tempus porta. Sed volutpat mauris sodales, vehicula mi id, rhoncus justo. Praesent elementum turpis malesuada, sollicitudin nibh vitae, congue neque. Donec ac urna risus.</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="demo" id="demo-3">
+                            <h1>Usługa 3</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lectus leo. Ut ac augue commodo arcu malesuada commodo. Donec viverra erat ante, at lacinia sem posuere in. Quisque id rhoncus lectus. Nunc maximus tempus porta. Sed volutpat mauris sodales, vehicula mi id, rhoncus justo. Praesent elementum turpis malesuada, sollicitudin nibh vitae, congue neque. Donec ac urna risus.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <script src="scripts/index.js" defer></script>
         </div>
     </body>

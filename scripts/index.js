@@ -4,6 +4,7 @@ var sticked = false;
 
 $(document).ready(function(){
     $('#logo-min').height($('#menu').height() - 10);
+    $('#particles-js').height($(window).height() - $('#header').height());
     if(shouldStick($(window).scrollTop())) {
         stickMenu(true);
     }

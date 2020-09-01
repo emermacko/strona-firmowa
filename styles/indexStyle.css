@@ -41,7 +41,7 @@ a {
     color: unset;
 }
 
-#container {
+#content {
     opacity: 0;
     width: 100vw;
     display: flex;
@@ -107,7 +107,6 @@ a {
     transform: scaleX(1);
 }
 
-
 .menu-item {
     font-size: 18px;
     margin: 2.5vw;
@@ -122,7 +121,7 @@ a {
 
 #particles-js {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     background: linear-gradient(45deg, rgba(40,46,57,1) 0%, rgba(66,77,98,1) 43%, rgba(102,122,148,1) 86%);
     /* background-image: linear-gradient(to right top, #282d36, #292e37, #2a2f38, #2b303a, #2c313b, #2f343e, #323842, #353b45, #3a414b, #404751, #454d58, #4b535e); */
     /* background-image: linear-gradient(to right top, #2d2f34, #2f3136, #313339, #34363b, #36383e, #393b42, #3d3f45, #404249, #45484f, #4a4d54, #50535a, #555960); */
@@ -131,6 +130,58 @@ a {
     background-position: 50% 50%;
     background-size: cover;
 }
+
+#title-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color: var(--bg-color);
+    opacity: .9;
+    font-weight: 100;
+}
+
+#title-text h1 {
+    font-size: 10vw;
+    margin: 20vh 0 2.5vh 0;
+}
+
+#title-text p {
+    margin: 0;
+}
+
+#main-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    margin-bottom: 50px;
+}
+
+.demo {
+    width: 80vw;
+    height: auto;
+    padding: 3vw 10vw 5vw 10vw;
+    margin-top: 50px;
+    cursor: pointer;
+    text-align: justify;
+    background-color:var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0.3rem .5rem 2rem 0 rgba(0,0,0,.42)!important;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.demo:hover {
+    box-shadow: 0.5rem .7rem 2.5rem 0 rgba(0, 0, 0, 0.596)!important;
+}
+
+.demo h1 {
+    text-align: center;
+}
+
+
+/* --------> PC <-------- */
 
 @media only screen and (min-width: 800px) {
     #header {
