@@ -218,11 +218,13 @@ a {
     }
 
     #title-text {
+        padding-left: 0;
         margin-left: 5vw;
     }
 
     #title-text h1 {
         font-size: min(10vw, 100px);
+        margin-top: 25vh;
     }
 
 }
@@ -233,6 +235,10 @@ a {
 
     #header {
         padding: 20px 15vw 20px 15vw;
+    }
+
+    #title-text {
+        margin-left: 15vw;
     }
 
     #services-container {
