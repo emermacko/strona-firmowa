@@ -10,10 +10,6 @@
     --text-color: #0F0F0F;
     --text-font: 'Poppins', sans-serif;
 
-    --gradient-start: #2D2F34;
-    --gradient-mid: #393B41;
-    --gradient-end: #555960;
-
     --gradient-start: #282D36;
     --gradient-mid: #2E333D;
     --gradient-end: #4B535E;
@@ -140,6 +136,7 @@ a {
     color: var(--bg-color);
     opacity: .9;
     font-weight: 100;
+    width: 100%;
 }
 
 #title-text h1 {
@@ -193,7 +190,6 @@ a {
     text-align: center;
 }
 
-
 /* --------> PC / TABLET <-------- */
 
 @media only screen and (min-width: 800px) {
@@ -220,6 +216,7 @@ a {
     #title-text {
         padding-left: 0;
         margin-left: 5vw;
+        width: unset;
     }
 
     #title-text h1 {
