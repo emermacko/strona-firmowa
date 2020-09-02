@@ -128,6 +128,11 @@ a {
     background-size: cover;
 }
 
+#particles-js canvas {
+    width: unset !important;
+    height: unset !important;
+}
+
 #title-text {
     position: absolute;
     display: flex;
