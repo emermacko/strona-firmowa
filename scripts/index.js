@@ -35,11 +35,21 @@ function stickMenu(bool) {
         menu.css('position', 'unset'); menu.css('top', 'unset');
         animateMargin('2.5vw', bool);
     }
+
     sticked = bool;
 }
 
+var preventRedirect = false;
+$('.demo p').hover(function(){
+    preventRedirect = true;
+}, function(){
+    preventRedirect = false;
+});
+
 $('.demo').click(function(){
-    location.href = $(this).attr('data-href');
+    if(!preventRedirect) {
+        location.href = $(this).attr('data-href');
+    }
 });
 
 function shouldStick(scrollTop) {

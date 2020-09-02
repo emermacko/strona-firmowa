@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+    transition: all .5s  ease-in-out;
 }
 
 :root {
@@ -95,7 +96,7 @@ a {
 .menu-item:after {
   display:block;
   content: '';
-  border-bottom: solid 1px #647A92;  
+  border-bottom: solid 1px var(--accent-color);  
   transform: scaleX(0);  
   transition: transform 300ms ease-in-out;
 }
@@ -108,12 +109,11 @@ a {
     font-size: 18px;
     margin: 2.5vw;
     margin-bottom: 10px;
-    transition: color .5s;
+    color: #2F3844;
 }
 
 .menu-item:hover {
-    color: #647A92;
-    transition: color .3s;
+    color: var(--accent-color);
 }
 
 #particles-js {
@@ -166,7 +166,7 @@ a {
 }
 
 .demo p {
-    user-select: text;
+    cursor: text;
 }
 
 .demo {
@@ -179,11 +179,14 @@ a {
     background-color:var(--bg-color);
     border-radius: 20px;
     box-shadow: 0.3rem .5rem 2rem 0 rgba(0,0,0,.42)!important;
-    transition: box-shadow 0.3s ease-in-out;
 }
 
 .demo:hover {
     box-shadow: 0.5rem .7rem 2.5rem 0 rgba(0, 0, 0, 0.596)!important;
+}
+
+.demo:hover h1 {
+    color: var(--accent-color);
 }
 
 .demo h1 {
