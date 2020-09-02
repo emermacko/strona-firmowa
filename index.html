@@ -5,13 +5,10 @@
         <link href="styles/indexStyle.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <meta charset="utf-8" name="viewport" content="shrink-to-fit=no, user-scalable=no, width=device-width, maximum-scale=1.0, initial-scale=1.0"/>
-        <script src="scripts/particles.min.js"></script>
+        <script src="scripts/tsparticles.min.js"></script>
     </head>
     <script src="scripts/jquery.min.js"></script>
     <body>
-        <script type="text/javascript">
-            $(document).ready(function(){$('#content').animate({opacity: 1}), 500})
-        </script>
         <div id="content">
             <div id="header">
                 <a id="logo-link" href="#">
@@ -20,9 +17,9 @@
                 </a>
                 <div id="menu">
                     <img src="img/logo.png" alt="logo-min" id="logo-min" style="height: 0;">
-                    <a class="menu-item" href="">O NAS</a>
-                    <a class="menu-item" href="">USŁUGI</a>
-                    <a class="menu-item" href="">KONTAKT</a>
+                    <a class="menu-item animate" href="">O NAS</a>
+                    <a class="menu-item animate" href="">USŁUGI</a>
+                    <a class="menu-item animate" href="">KONTAKT</a>
                 </div>
             </div>
             <div id="particles-js">
@@ -31,19 +28,18 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
             </div>
-            <script> particlesJS.load('particles-js', 'assets/particles-config.json'); </script>
             <div id="main-container">
                 <div id="services-container">
-                    <div class="demo" id="demo-1" data-href='https://google.com'>
-                        <h1>Usługa 1</h1>
+                    <div class="demo animate" id="demo-1">
+                        <a href=""><h1 class="animate">Usługa 1</h1></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lectus leo. Ut ac augue commodo arcu malesuada commodo. Donec viverra erat ante, at lacinia sem posuere in. Quisque id rhoncus lectus. Nunc maximus tempus porta. Sed volutpat mauris sodales, vehicula mi id, rhoncus justo. Praesent elementum turpis malesuada, sollicitudin nibh vitae, congue neque. Donec ac urna risus.</p>
                     </div>
-                    <div class="demo" id="demo-2" data-href='https://facebook.com'>
-                        <h1>Usługa 2</h1>
+                    <div class="demo animate" id="demo-2">
+                        <a href=""><h1 class="animate">Usługa 2</h1></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lectus leo. Ut ac augue commodo arcu malesuada commodo. Donec viverra erat ante, at lacinia sem posuere in. Quisque id rhoncus lectus. Nunc maximus tempus porta. Sed volutpat mauris sodales, vehicula mi id, rhoncus justo. Praesent elementum turpis malesuada, sollicitudin nibh vitae, congue neque. Donec ac urna risus.</p>
                     </div>
-                    <div class="demo" id="demo-3" data-href='https://youtube.com'>
-                        <h1>Usługa 3</h1>
+                    <div class="demo animate" id="demo-3">
+                        <a href=""><h1 class="animate">Usługa 3</h1></a>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lectus leo. Ut ac augue commodo arcu malesuada commodo. Donec viverra erat ante, at lacinia sem posuere in. Quisque id rhoncus lectus. Nunc maximus tempus porta. Sed volutpat mauris sodales, vehicula mi id, rhoncus justo. Praesent elementum turpis malesuada, sollicitudin nibh vitae, congue neque. Donec ac urna risus.</p>
                     </div>
                 </div>

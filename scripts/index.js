@@ -1,67 +1,54 @@
 var menuAnimation = false;
 var sticked = false;
 
-
-$(document).ready(function(){
-    $('#logo-min').height($('#menu').height() - 10);
-    $('#particles-js').height($(window).height() - $('#header').height());
-    if(shouldStick($(window).scrollTop())) {
+$(document).ready(function() {
+    tsParticles.loadJSON('particles-js', 'assets/particles-config.json');
+  
+    $("#content").animate({ opacity: 1 }, 500);
+    $("#logo-min").height($("#menu").height() - 10);
+    $("#particles-js").height($(window).height() - $("#header").height());
+  
+    if (shouldStick($(window).scrollTop())) {
         stickMenu(true);
     }
 });
 
-$('.particles-js-canvas-el').ready(function(){
-    $('.particles-js-canvas-el').attr('width', $(window).width());
-    $('.particles-js-canvas-el').attr('height', $('#particles-js').height());
-})
-
-$(document).scroll(function(){
-    const scrollTop = $(window).scrollTop();    
-    if(shouldStick(scrollTop) && !sticked){
+$(document).scroll(function() {
+    const scrollTop = $(window).scrollTop();
+    if (shouldStick(scrollTop) && !sticked) {
         stickMenu(true);
     }
-    if(!shouldStick(scrollTop) && sticked) {
+    if (!shouldStick(scrollTop) && sticked) {
         stickMenu(false);
     }
 });
 
 function stickMenu(bool) {
-    const menu = $('#menu');
+    const menu = $("#menu");
     var calc = menu.width();
-    
-    $('.menu-item').each(function(){
-        calc -= ($(this).width() + 0.05*$(window).width());
+
+    $(".menu-item").each(function() {
+        calc -= $(this).width() + 0.05 * $(window).width();
     });
 
-    if(bool) {
-        menu.css('position', 'fixed'); menu.css('top', 0);
+    if (bool) {
+        menu.css("position", "fixed");
+        menu.css("top", 0);
         animateMargin(calc, bool);
     } else {
-        menu.css('position', 'unset'); menu.css('top', 'unset');
-        animateMargin('2.5vw', bool);
+        menu.css("position", "unset");
+        menu.css("top", "unset");
+        animateMargin("2.5vw", bool);
     }
 
     sticked = bool;
 }
 
-var preventRedirect = false;
-$('.demo p').hover(function(){
-    preventRedirect = true;
-}, function(){
-    preventRedirect = false;
-});
-
-$('.demo').click(function(){
-    if(!preventRedirect) {
-        location.href = $(this).attr('data-href');
-    }
-});
-
 function shouldStick(scrollTop) {
-    const menuHeight = $('#menu').outerHeight();
-    const headerHeight = $('#header').outerHeight();
+    const menuHeight = $("#menu").outerHeight();
+    const headerHeight = $("#header").outerHeight();
 
-    return (!isDesktop() && (scrollTop >= headerHeight - menuHeight));
+    return !isDesktop() && scrollTop >= headerHeight - menuHeight;
 }
 
 function animateMargin(margin, show) {
@@ -82,7 +69,7 @@ function isDesktop() {
     return $(window).width() >= 800;
 }
 
-$('#title-text').on('dragstart', function(event) {
+$("#title-text").on("dragstart", function(event) {
     event.preventDefault();
 });
 
