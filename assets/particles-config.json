@@ -71,8 +71,8 @@
     "detect_on": "Canvas",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "repulse"
+        "enable": true,
+        "mode": "attract"
       },
       "onclick": {
         "enable": true,
