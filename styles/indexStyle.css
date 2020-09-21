@@ -222,6 +222,7 @@ a {
         padding: 20px 5vw 20px 5vw;
         align-items: center;
         justify-content: flex-start;
+        border-bottom: 1px #c0c6cc solid;
     }
 
     #menu {
@@ -229,6 +230,7 @@ a {
         margin-left: auto;
         padding: unset;
         align-items: center;
+        border-bottom: none;
     }
 
     .menu-item {
