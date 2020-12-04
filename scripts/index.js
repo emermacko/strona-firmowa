@@ -23,7 +23,7 @@ $(document).scroll(function() {
     }
 });
 
-function stickMenu(bool) {
+function stickMenu(stick) {
     const menu = $("#menu");
     var calc = menu.width();
 
@@ -31,24 +31,23 @@ function stickMenu(bool) {
         calc -= $(this).width() + 0.05 * $(window).width();
     });
 
-    if (bool) {
+    if (stick) {
         menu.css("position", "fixed");
+        $('#particles-js').css("margin-top", menu.height());
         menu.css("top", 0);
-        animateMargin(calc, bool);
+        animateMargin(calc, stick);
     } else {
         menu.css("position", "unset");
+        $('#particles-js').css("margin-top", 0);
         menu.css("top", "unset");
-        animateMargin("2.5vw", bool);
+        animateMargin("2.5vw", stick);
     }
 
-    sticked = bool;
+    sticked = stick;
 }
 
 function shouldStick(scrollTop) {
-    const menuHeight = $("#menu").outerHeight();
-    const headerHeight = $("#header").outerHeight();
-
-    return !isDesktop() && scrollTop >= headerHeight - menuHeight;
+    return !isDesktop() && (scrollTop >= $("#logo-link").outerHeight());
 }
 
 function animateMargin(margin, show) {
@@ -65,11 +64,15 @@ function animateMargin(margin, show) {
     }
 }
 
+$('#logo-min').click(function() {
+    $('html').animate({ scrollTop: 0 }, 400, 'swing');
+});
+
 function isDesktop() {
     return $(window).width() >= 800;
 }
 
-$("#title-text").on("dragstart", function(event) {
+$("#title-text, img").on("dragstart", function(event) {
     event.preventDefault();
 });
 
