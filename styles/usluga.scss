@@ -1,0 +1,166 @@
+$text-color: #0F0F0F;
+$white-text: #FDFDFD;
+
+#control-height {
+    height: 100vh;
+    width: 0;
+    position: absolute;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#intro-bg {
+    width: 100vw;
+    height: calc(100vh - 145px);
+    background-image: url('../img/services/usluga-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5vw;
+    transition: height .3s ease-in-out;
+    position: relative;
+}
+
+#title-circle {
+    width: 70vw;
+    height: 70vw;
+    max-width: 260px;
+    max-height: 260px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 15, 15, .7);
+    border: 4px solid $white-text;
+    margin: 0 0 5vh 0;
+    padding: 0 3vw;
+}
+
+#title {
+    font-size: #{"min(22px, 5.7vw)"};
+    text-align: center;
+    color: $white-text;
+    width: 70vw;
+    max-width: 260px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#intro-text {
+    color: $white-text;
+    text-align: center;
+    text-transform: uppercase;
+
+    &>p:nth-of-type(1) {
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+}
+
+#bounce-arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    flex-grow: 0;
+    bottom: 0;
+    animation: bounce 3s infinite;
+
+    &>svg {
+        width: 40px;
+        height: 40px;
+        fill: $white-text;
+    }
+}
+
+#sub-1 {
+    padding: 5vh 4vw;
+}
+
+#subtitle-1 {
+    font-size: 1.2em;
+    text-align: left;
+    color: $text-color;
+
+    &::before {
+        content: "";
+        width: 60vw;
+        margin-left: 15vw;
+        display: block;
+        position: relative;   
+        margin-top: 3vh;    
+        border-bottom: 1px solid $white-text;
+    }
+
+    &>span {
+        font-weight: 600;
+    }
+}
+
+.gridpane {
+    background-color: rgba(201, 224, 255, .15);
+    border: 1px solid #607b88;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 5vh;
+
+    &>img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+/* --------> PC / TABLET <-------- */
+
+@media only screen and (min-width: 800px) {
+    #intro-bg {
+        height: calc(100vh - 100px);
+    }
+
+    #sub-1 {
+        width: 90vw;
+    }
+
+    #subtitle-1 {
+        text-align: center;
+    }
+
+    #panes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 5vh 0;
+
+        &>.gridpane {
+            display: inline-flex;
+            width: 40%;
+        }
+    }
+}
+
+/* --------> PC <-------- */
+
+@media only screen and (min-width: 1100px) {
+    #sub-1 {
+        width: 60vw;
+    }
+
+    .gridpane {
+        width: 30%;
+    }
+}

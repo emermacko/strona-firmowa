@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Kontakt</title>
+        <link href="styles/commonStyle.css" rel="stylesheet">
+        <link href="styles/contactStyle.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/wkv2pqb.css">
+        <meta charset="utf-8" name="viewport" content="shrink-to-fit=no, user-scalable=no, width=device-width, maximum-scale=1.0, initial-scale=1.0"/>
+        <meta name="theme-color" content="#FDFDFD"/>
+        <noscript><style> #content { opacity: 1 !important; } </style></noscript>
+    </head>
+    <script src="scripts/jquery.min.js"></script>
+    <body data-bar="true">
+        <div id="content">
+            <div id="header-bar"></div>
+            <div id="header">
+                <a id="logo-link" href="/">
+                    <img src="img/logo.png" alt="logo" id="logo">
+                    <span id="name">Nazwa Firmy</span>
+                </a>
+                <div id="menu">
+                    <img src="img/logo.png" alt="logo-min" id="logo-min" style="height: 0;">
+                    <a class="menu-item animate" href="">O MNIE</a>
+                    <a class="menu-item animate" href="">USŁUGI</a>
+                    <a class="menu-item animate active" href="">KONTAKT</a>
+                </div>
+            </div>
+            <div id="main-container">
+                <div id="form-title"><p>Kontakt</p></div>
+                <form id="contact-form" >
+                    <div class="input-container">
+                        <label>Imię i nazwisko *</label>
+                        <input class=input type="text" id="input-name" name="name" required="true" data-min-length="5">
+                    </div>
+                    <div class="input-container">
+                        <label>E-mail *</label>
+                        <input class=input type="email" id="input-email" name="email" required="true" data-validate="email">
+                    </div>
+                    <div class="input-container">
+                        <label>Telefon</label>
+                        <input class=input id="input-phone" name="phone" data-validate="phone">
+                    </div>
+                    <div class="input-container">
+                        <label>Wiadomość *</label>
+                        <textarea class="input" type="text" id="input-message" name="message" required="true" data-min-length="20"></textarea>
+                    </div>
+                    <input class=input type="submit" value="Wyślij" disabled>
+                </form>
+            </div>
+        </div>
+            <script src="scripts/common.js" async></script>
+            <script src="scripts/contact.js" defer></script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Pragati+Narrow&display=swap');
+@font-face {
+    font-family: Praho;
+    src: url("../assets/Praho-Black.ttf");
+}
+
+$bg-color: #FDFDFD;
+$text-color: #0F0F0F;
+$text-font: 'Poppins', sans-serif;
+// $title-font: 'nueva-std', serif;
+$title-font: 'Praho', serif;
+$gradient-start: #282D36;
+$gradient-mid: #2E333D;
+$gradient-end: #4B535E;
+$accent-color: #D9A21B;
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,body {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: $text-font;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.animate {
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+
+    &:hover {
+        transition: color .5s ease-in-out, box-shadow .5s ease-in-out;;
+    }
+}
+
+#content {
+    opacity: 0;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-bar {
+    z-index: 3;
+    width: 100vw;
+    height: 5px;
+    background-color: #4E5E73;
+}
+
+#header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bg-color;
+    z-index: 3;
+}
+
+#logo-link {
+    height: 100px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo, #logo-min {
+    height: 60px;
+    justify-self: flex-start;
+}
+
+#name {
+    height: 100px;
+    line-height: 100px;
+    font-family: 'Pragati Narrow', sans-serif;
+    color: #4E5E73;
+    margin-left: 20px;
+    font-size: #{"min(55px, 12vw)"};
+}
+
+#menu {
+    height: 40px;
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    background-color: $bg-color;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw 0 5vw;
+    border-bottom: 1px #c0c6cc solid;
+}
+
+#logo-min {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    left: 5vw;
+}
+
+.menu-item {
+    font-size: 18px;
+    margin: 2.5vw;
+    margin-bottom: 10px;
+    color: #2F3844;
+
+    &:after {
+        display:block;
+        content: '';
+        border-bottom: solid 1px $accent-color;  
+        transform: scaleX(0);  
+        transition: transform .3s ease-in-out, border .3s ease-in-out;
+    }
+
+    &.active {
+        &:after {
+            border-bottom-color: #2F3844;
+            transform: scaleX(1);
+        }
+    }
+
+    &:hover { 
+        color: $accent-color;
+
+        &:after {
+            transform: scaleX(1);
+            border-bottom-color: $accent-color;
+        }
+    }
+
+}
+
+/* --------> PC / TABLET <-------- */
+
+
+@media only screen and (min-width: 800px) {
+    #header-bar {
+        position: sticky;
+        top: 0;
+    }
+
+    #header {
+        position: sticky;
+        top: 5px;
+        height: 100px;
+        flex-direction: row;
+        padding: 20px 5vw 20px 5vw;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px #c0c6cc solid;
+    }
+
+    #menu {
+        width: unset;
+        margin-left: auto;
+        padding: unset;
+        align-items: center;
+        border-bottom: none;
+    }
+
+    .menu-item {
+        margin: 0 2.5vw 0 2.5vw;
+    }
+}
+
+/* --------> PC <-------- */
+
+@media only screen and (min-width: 1100px) {
+
+    #header {
+        padding: 20px 15vw 20px 15vw;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
